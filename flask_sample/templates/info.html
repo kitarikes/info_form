@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/info" method="POST">
+<div class="mx-auto" style="width: 700px;padding: 40px;">
+  <h3>お問い合わせ</h3>
+<div class="d-flex flex-column bd-highlight mb-3">
+  <div class="form-group">
+    <label for="text1">お名前:</label>
+    <input type="text" name="name" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="text2">件名:</label>
+    <input type="text" name="subject" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="text3">所属:</label>
+    <input type="text" name="affiliation" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="text4">メールアドレス:</label>
+    <input type="text" name="email" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="textarea1">お問い合わせ内容:</label>
+    <textarea name="contents" class="form-control" rows=10></textarea>
+  </div>
+  <p style="text-align: center;padding: 20px;">
+    <button type="submit" value="submit" class="btn btn-dark" style="vertical-align: mnamedle;width: 100px;">送信する</button>
+  </p>
+</div>
+</div>
+</form>
+{% endblock %}
