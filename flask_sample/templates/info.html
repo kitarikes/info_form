@@ -6,28 +6,100 @@
 <div class="d-flex flex-column bd-highlight mb-3">
   <div class="form-group">
     <label for="text1">お名前:</label>
-    <input type="text" name="name" class="form-control">
+    <input type="text" id="name" name="name" class="form-control required" required>
   </div>
   <div class="form-group">
     <label for="text2">件名:</label>
-    <input type="text" name="subject" class="form-control">
+    <input type="text" id="subject" name="subject" class="form-control" required>
   </div>
   <div class="form-group">
     <label for="text3">所属:</label>
-    <input type="text" name="affiliation" class="form-control">
+    <input type="text" id="affiliation" name="affiliation" class="form-control" >
   </div>
   <div class="form-group">
     <label for="text4">メールアドレス:</label>
-    <input type="text" name="email" class="form-control">
+    <input type="text" id="email" name="email" class="form-control required" pattern="[\w\d_-]+@[\w\d_-]+\.[\w\d._-]+" required>
   </div>
   <div class="form-group">
     <label for="textarea1">お問い合わせ内容:</label>
-    <textarea name="contents" class="form-control" rows=10></textarea>
+    <textarea id="contents" name="contents" class="form-control required" rows=10 required></textarea>
   </div>
   <p style="text-align: center;padding: 20px;">
-    <button type="submit" value="submit" class="btn btn-dark" style="vertical-align: mnamedle;width: 100px;">送信する</button>
+    <button type="button" value="submit" data-toggle="modal" onclick="verification();" data-target="#exampleModal" class="btn btn-dark" style="vertical-align: mnamedle;width: 100px;">送信する</button>
   </p>
+<!-- モーダルの設定 -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">入力内容の確認</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex flex-column bd-highlight mb-3">
+          <div class="form-group">
+            <label for="text1">お名前:</label>
+            <input type="text" id="name_" name="name" class="form-control" readonly>
+          </div>
+          <div class="form-group">
+            <label for="text2">件名:</label>
+            <input type="text" id="subject_"name="subject" class="form-control" readonly>
+          </div>
+          <div class="form-group">
+            <label for="text3">所属:</label>
+            <input type="text" id="affiliation_" name="affiliation" class="form-control" readonly>
+          </div>
+          <div class="form-group">
+            <label for="text4">メールアドレス:</label>
+            <input type="text" id="email_" name="email" class="form-control" pattern="[\w\d_-]+@[\w\d_-]+\.[\w\d._-]+" readonly>
+          </div>
+          <div class="form-group">
+            <label for="textarea1">お問い合わせ内容:</label>
+            <textarea name="contents" id="contents_" class="form-control" rows=10 readonly required></textarea>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">戻る</button>
+        <button type="submit" class="btn btn-dark">送信する</button>
+        </form>
+      </div><!-- /.modal-footer -->
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 </div>
 </div>
-</form>
+<script>
+  function verification(){
+  var name = $("#name").val();
+  var subject = $("#subject").val();
+  var affiliation = $("#affiliation").val();
+  var email = $("#email").val();
+  var contents = $("#contents").val();
+
+  document.getElementById("name_").value = name;
+  document.getElementById("subject_").value = subject;
+  document.getElementById("affiliation_").value = affiliation;
+  document.getElementById("email_").value = email;
+  document.getElementById("contents_").value = contents;
+  }
+</script>
+<script>
+  $('.required').on('blur', function() {
+        var error; // エラー用の変数を定義
+        if( $(this).val() === '' ) { // この要素のvalueが空文字だったらエラー
+            error = true;
+        }
+        if( error ) {
+            // エラーが見つかった場合
+	    if( !$(this).next('span.text-danger').length ) { // この要素の後続要素が存在しない場合
+               	    $(this).after('<span class="text-danger">未入力です</span>'); // この要素の後にエラーメッセージを挿入
+		}
+        } else {
+            // エラーがなかった場合
+            $(this).next('span.text-danger').remove(); // この要素の後続要素を削除
+        }
+    });
+</script>
 {% endblock %}

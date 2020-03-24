@@ -28,7 +28,7 @@ def func1():
     print(results)
     db.session.add(Info(name=results['name'], subject=results['subject'], affiliation=results['affiliation'], email=results['email'], contents=results['contents']))
     db.session.commit()
-    return 'succses'
+    return render_template('home.html', result="送信しました！")
 
 @app.route('/admin', methods=['GET'])
 def admin():
