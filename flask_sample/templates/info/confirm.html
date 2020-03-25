@@ -7,11 +7,11 @@
 {% block content %}
 
 <form action="/info" method="POST">
-<input type="hidden" name="name" value="{{name}}">
-<input type="hidden" name="email" value="{{email}}">
-<input type="hidden" name="subject" value="{{subject}}">
-<input type="hidden" name="affiliation" value="{{affiliation}}">
-<textarea type="hidden" name="contents" value="{{contents}}" style="display: none;"></textarea>
+<input type="hidden" name="name" value={{name}}>
+<input type="hidden" name="email" value={{email}}>
+<input type="hidden" name="subject" value={{subject}}>
+<input type="hidden" name="affiliation" value={{affiliation}}>
+<input type="hidden" name="contents" value={{contents}}>
 
 <div class="container">
   <div class='row'>

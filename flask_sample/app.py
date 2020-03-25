@@ -26,6 +26,7 @@ def info():
     return render_template('info/info.html')
   else:
     results = request.form
+    print(results)
     db.session.add(Info(name=results['name'], subject=results['subject'], affiliation=results['affiliation'], email=results['email'], contents=results['contents']))
     db.session.commit()
     return render_template('info/finished.html')
@@ -33,7 +34,13 @@ def info():
 @app.route('/confirm', methods=['POST'])
 def confirm():
   results = request.form
-  return render_template('info/confirm.html', name=results['name'], subject=results['subject'], affiliation=results['affiliation'], email=results['email'], contents=results['contents'])
+  return render_template('info/confirm.html', 
+                          name=results['name'], 
+                          subject=results['subject'], 
+                          affiliation=results['affiliation'], 
+                          email=results['email'], 
+                          contents=results['contents']  
+                          )
 
 @app.route('/admin', methods=['GET'])
 def admin():
