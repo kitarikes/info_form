@@ -39,7 +39,7 @@ def confirm():
                           subject=results['subject'], 
                           affiliation=results['affiliation'], 
                           email=results['email'], 
-                          contents=results['contents']  
+                          contents=results['contents'] 
                           )
 
 @app.route('/admin', methods=['GET'])
