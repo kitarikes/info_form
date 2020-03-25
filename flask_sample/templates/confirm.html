@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block style %}
+<style>
+  .row {padding: 10px;}
+</style>
+{% endblock %}
+{% block content %}
+
+<form action="/info" method="POST">
+<input type="hidden" name="name" value="{{name}}">
+<input type="hidden" name="email" value="{{email}}">
+<input type="hidden" name="subject" value="{{subject}}">
+<input type="hidden" name="affiliation" value="{{affiliation}}">
+<textarea type="hidden" name="contents" value="{{contents}}" style="display: none;"></textarea>
+
+<div class="container">
+  <div class='row'>
+    <h3>確認画面</h3>
+  </div>
+<div class="row">
+<label class="col-sm-2 control-label" for="name">お名前: </label>
+<div class="card col-sm-2">{{name}}</div>
+</div>
+<div class="row">
+<label class="col-sm-2 control-label" for="subject">件名: </label>
+<div class="card col-sm-3">{{subject}}</div>
+</div>
+<div class="row">
+  <label class="col-sm-2 control-label" for="affiliation">所属: </label>
+  <div class="card col-sm-3">{{affiliation}}</div>
+</div>
+<div class="row">
+  <label class="col-sm-2 control-label" for="mail">メールアドレス: </label>
+  <div class="card col-sm-3">{{email}}</div>
+</div>
+<div class="row">
+  <label class="col-sm-2 control-label" for="contents">お問い合わせ内容: </label>
+  <div class="card card-body col-sm-4" style="word-wrap:break-word;">{{contents}}</div>
+</div>
+<p style="padding: 20px;">
+  <button type="submit" value="submit" class="btn btn-dark">送信する</button>
+  <button type="button" onclick="history.back()" class="btn btn-secondary">戻る</button>
+</p>
+</form>
+{% endblock %}

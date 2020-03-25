@@ -13,6 +13,7 @@ def create_app():
   return app
 
 app = create_app()
+app.secret_key = "aaa"
 db = SQLAlchemy(app)
 
 @app.route('/', methods=['GET'])
@@ -20,15 +21,19 @@ def home():
   return render_template('home.html')
 
 @app.route('/info', methods=['GET', 'POST'])
-def func1():
+def info():
   if request.method == 'GET':
     return render_template('info.html')
   else:
     results = request.form
-    print(results)
     db.session.add(Info(name=results['name'], subject=results['subject'], affiliation=results['affiliation'], email=results['email'], contents=results['contents']))
     db.session.commit()
-    return render_template('home.html', result="送信しました！")
+    return render_template('finished.html')
+
+@app.route('/confirm', methods=['POST'])
+def confirm():
+  results = request.form
+  return render_template('confirm.html', name=results['name'], subject=results['subject'], affiliation=results['affiliation'], email=results['email'], contents=results['contents'])
 
 @app.route('/admin', methods=['GET'])
 def admin():
