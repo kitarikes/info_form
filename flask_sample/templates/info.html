@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
-<form action="/info" method="POST">
+<form action="/confirm" method="POST">
 <div class="mx-auto" style="width: 700px;padding: 40px;">
   <h3>お問い合わせ</h3>
 <div class="d-flex flex-column bd-highlight mb-3">
@@ -25,7 +25,7 @@
     <textarea id="contents" name="contents" class="form-control required" rows=10 required></textarea>
   </div>
   <p style="text-align: center;padding: 20px;">
-    <button type="submit" value="submit" data-toggle="modal"  class="btn btn-dark" style="vertical-align: mnamedle;width: 100px;">送信する</button>
+    <button type="submit" value="submit" class="btn btn-dark" style="vertical-align: mnamedle;width: 100px;">確認</button>
   </p>
 </div>
 </div>
