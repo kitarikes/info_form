@@ -4,4 +4,4 @@
 *.pyc
 __pycache__/
 readme.md
-config.py
+.env
