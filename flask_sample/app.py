@@ -26,9 +26,12 @@ app = create_app()
 app.secret_key = os.environ.get("SECRET_KEY")
 db = SQLAlchemy(app)
 
+
 @app.route('/', methods=['GET'])
 def home():
-  return render_template('home.html', **session)
+  # return render_template('home.html', **session)
+  return redirect('/info')
+
 
 # お問い合わせフォーム関連
 @app.route('/info', methods=['GET', 'POST'])
