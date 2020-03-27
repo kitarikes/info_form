@@ -32,6 +32,9 @@ def home():
   # return render_template('home.html', **session)
   return redirect('/info')
 
+@app.route('/home', methods=['GET'])
+def home():
+  return render_template('home.html', **session)
 
 # お問い合わせフォーム関連
 @app.route('/info', methods=['GET', 'POST'])
