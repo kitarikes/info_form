@@ -33,7 +33,7 @@ def home():
   return redirect('/info')
 
 @app.route('/home', methods=['GET'])
-def home():
+def index():
   return render_template('home.html', **session)
 
 # お問い合わせフォーム関連
