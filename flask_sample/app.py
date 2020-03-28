@@ -43,7 +43,9 @@ def info():
     return render_template('info/info.html', **session)
   else:
     results = request.form
-    print(results)
+    if results['name'] == None:
+      return render_template('info/info.html', **session)
+    # print(results)
     db.session.add(Info(**results))
     db.session.commit()
     return render_template('info/finished.html', **session)
