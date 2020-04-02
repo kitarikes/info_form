@@ -11,10 +11,10 @@ webアプリの練習として、簡単なお問い合わせフォームを作�
 
 <h3 align="center">使用技術</h3>
 <p align="center">
-  <a href="[flask公式サイトURL](https://a2c.bitbucket.io/flask/)"><img src="https://a2c.bitbucket.io/flask/_images/logo-full.png" height="45px;" /></a><br>
-  <a href="[jquery公式サイトURL](https://jquery.com/)"><img src="https://syncer.jp/storage/web/brand-logos/static/dst/jquery-logo-001.png" height="45px;" /></a>
-  <a href="[bootstrap公式サイトURL](https://getbootstrap.com/)"><img src="https://www.yutaliberty.com/wp-content/uploads/2019/03/bootstrap-logo.png" height="45px;" /></a>
-  <a href="[heroku公式サイトURL](https://jp.heroku.com/)"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/y/yazawa_tech/20190705/20190705103445.png" height="45px;" /></a>
+  <a href="https://a2c.bitbucket.io/flask/"><img src="https://a2c.bitbucket.io/flask/_images/logo-full.png" height="45px;" /></a><br>
+  <a href="https://jquery.com/"><img src="https://syncer.jp/storage/web/brand-logos/static/dst/jquery-logo-001.png" height="45px;" /></a>
+  <a href="https://getbootstrap.com/"><img src="https://www.yutaliberty.com/wp-content/uploads/2019/03/bootstrap-logo.png" height="45px;" /></a>
+  <a href="https://jp.heroku.com/"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/y/yazawa_tech/20190705/20190705103445.png" height="45px;" /></a>
 
 </p>
 
