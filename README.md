@@ -13,10 +13,8 @@ webアプリの練習として、簡単なお問い合わせフォームを作�
 <p align="center">
   <a href="[flask公式サイトURL](https://a2c.bitbucket.io/flask/)"><img src="https://a2c.bitbucket.io/flask/_images/logo-full.png" height="45px;" /></a><br>
   <a href="[jquery公式サイトURL](https://jquery.com/)"><img src="https://syncer.jp/storage/web/brand-logos/static/dst/jquery-logo-001.png" height="45px;" /></a>
-  <a href="[bootstrap公式サイトURL](https://getbootstrap.com/)"><img src="
-  https://www.yutaliberty.com/wp-content/uploads/2019/03/bootstrap-logo.png" height="45px;" /></a>
-  <a href="[heroku公式サイトURL](https://jp.heroku.com/)"><img src="
-  https://cdn-ak.f.st-hatena.com/images/fotolife/y/yazawa_tech/20190705/20190705103445.png" height="45px;" /></a>
+  <a href="[bootstrap公式サイトURL](https://getbootstrap.com/)"><img src="https://www.yutaliberty.com/wp-content/uploads/2019/03/bootstrap-logo.png" height="45px;" /></a>
+  <a href="[heroku公式サイトURL](https://jp.heroku.com/)"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/y/yazawa_tech/20190705/20190705103445.png" height="45px;" /></a>
 
 </p>
 
@@ -37,7 +35,7 @@ webアプリの練習として、簡単なお問い合わせフォームを作�
 - [Bootstrap 4でブロック中央寄せ](https://qiita.com/Fendo181/items/1f32cbbfa676766ae331)
 - [Bootstrapでテーブルを利用する方法](https://qiita.com/AquaMeria/items/b94d1d9ba074f04336b9#%E3%83%AC%E3%82%B9%E3%83%9D%E3%83%B3%E3%82%B7%E3%83%96)
 
-## デプロイ時のエラーや注意
+## :warning: デプロイ時のエラーや注意
 
 ```Console
 $ heroku run FLASK_APP=run.py flask shell
